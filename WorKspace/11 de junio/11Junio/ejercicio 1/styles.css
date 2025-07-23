@@ -1,0 +1,21 @@
+#div-margin {
+    background-color: rgb(55, 214, 34);
+    margin: 40px;
+    padding: 10px;
+    border-style: solid;
+}
+
+#div-padding {
+    background-color: rgb(108, 17, 131);
+    padding: 30px;
+    margin: 10px;
+    border-style: solid;
+}
+
+#div-border {
+    background-color: rgb(231, 128, 9);
+    border: 5px black;
+    margin: 10px;
+    padding: 10px;
+    border-style: dotted;
+}

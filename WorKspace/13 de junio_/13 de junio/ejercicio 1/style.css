@@ -1,0 +1,50 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente más elegante */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Color de fondo más suave */
+}
+
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    gap: 25px;
+}
+
+.month {
+    display: inline-block;
+    width: 22%;
+    height: 200px;
+    background: linear-gradient(135deg, #ffcccb 30%, #ff9aa2 100%);
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.month:nth-child(even) {
+    background: linear-gradient(135deg, #f0e68c 30%, #f8d49b 100%);
+}
+
+.month:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.month h2 {
+    font-size: 1.6em;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.month p {
+    font-size: 1.2em;
+    color: #555;
+    font-style: italic;
+}

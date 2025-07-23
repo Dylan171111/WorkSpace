@@ -1,0 +1,100 @@
+td {
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+
+#felicidad {
+  background-color: #f5e025;
+  padding: 30px;
+  margin: 30px;
+  border: 5px solid;
+  border-right: 20px solid;
+  border-color: #fbc02d;
+}
+
+
+#gratitud {
+  background-color: #a9f085;
+  padding: 30px;
+  margin: 30px;
+  border: 5px solid;
+  border-left: 30px solid;
+   border-color: #388e3c;
+}
+
+
+#amor {
+  background-color: #fa598f;
+  padding: 30px;
+  margin: 30px;
+  border-left: 5px solid;
+  border-top: 30px solid;
+  border-color: #e91e63;
+}
+
+
+#esperanza {
+  background-color: #a7e7f0;
+  
+  padding: 20px;
+  margin: 30px;
+  border: 5px solid;
+  border-bottom: 20px solid;
+  border-color: #009688;
+}
+
+
+#orgullo {
+  background-color: #ffd23f;
+  padding: 20px;
+  margin: 30px;
+  border: 5px dotted;
+  border-right: 40px dotted;
+  border-color: #ffa000;
+}
+
+
+#ira {
+  background-color: #cc0f0b;
+  padding: 30px;
+  margin: 30px;
+  border: 5px dotted;
+  border-bottom: 40px dotted;
+   border-color: #fa0000;
+}
+
+
+#tristeza {
+  background-color: #60aff0;
+  padding: 30px;
+  margin: 30px;
+   border: 5px dotted;
+   border-left: 30px dotted;
+   border-color: #1976d2;
+}
+
+
+#miedo {
+  background-color: #524d4d;
+  padding: 30px;
+  margin: 30px;
+   border: 5px dotted;
+   border-top: 40px dotted;
+   border-color: #242222;
+}
+
+
+#ansiedad {
+  background-color: #a583d8;
+  padding: 30px;
+  margin: 30px;
+
+   border-right: 30px dotted;
+   border-color: #5c15d8;
+}

@@ -1,0 +1,12 @@
+#encabezado-tabla {
+  background-color: black;
+  color: white;
+}
+
+.fila-azul {
+  background-color: blue;
+}
+
+.fila-gris {
+  background-color: gray;
+}
