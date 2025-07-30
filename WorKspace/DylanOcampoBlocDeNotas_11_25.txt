@@ -1,0 +1,336 @@
+
+DYLAN OCAMPO TEJADA 
+
+11A
+
+
+
+
+FECHA:
+30/04/2025
+
+https://github.com/HugoLeonardo-hub/Mr_Matematica.git
+De esta pagina pordria sacar el cuadro de conjunto ya que contiene informacion buena sobre el tema de matematicas 
+
+
+https://github.com/AlexDiaz2653/Ejercicio-Sumas.git
+Me gusto los ejercicos de suma, esta sera una opciopn para agregar a la pagina
+
+
+
+https://github.com/allfrith/MATH-KIDS.git
+Esta pagina fue una de mis favoritas ya que tiene un diseño super bueno y unos juegos muy divertido. Esta pagina llama mucho la atencion.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+FECHA: 
+7/05/2025
+                                                                                                                                                                                                      
+1. ¿Ques es HTTP?
+
+R// HTTP, es un protocolo de comunicación que permite la transferencia de información entre un cliente y un servidor. Es la base de la web y se utiliza para solicitar y recibir páginas web, imágenes, videos y otros recursos. HTTP funciona mediante solicitudes y respuestas, donde el cliente envía una solicitud al servidor y este responde con el contenido solicitado.
+
+Métodos HTTP HTTP define varios métodos para interactuar con los servidores:
+
+GET: Solicita datos de un servidor 
+
+POST: Envía datos al servidor.
+
+PUT: Actualiza un recurso en el servidor.
+
+DELETE: Elimina un recurso en el servidor.
+
+PATCH: Modifica parcialmente un recurso.
+
+
+
+2. ¿Que hace el usuario cuando se loguea?
+que es lo q pasa del lado del usuario
+ 
+R// Cuando un usuario se loguea en una aplicación o sitio web, generalmente sigue estos pasos:
+
+-Ingresa sus credenciales (nombre de usuario y contraseña) en un formulario de inicio de sesión.
+
+-Envía la solicitud de autenticación al servidor al hacer clic en "Iniciar sesión".
+
+-Recibe una respuesta del servidor, que puede ser:
+
+-Acceso concedido: el usuario es redirigido a su cuenta o área privada.
+
+-Acceso denegado: se muestra un mensaje de error si las credenciales son incorrectas.
+
+
+
+
+3. ¿Que hace el servidor cuando un usuario se loguea?
+que es lo que pasa del lado del servidor 
+
+R// Desde el lado del servidor, el proceso de autenticación sigue estos pasos:
+
+-Recibe la solicitud con las credenciales del usuario.
+
+-Verifica las credenciales comparándolas con la base de datos.
+
+-Genera una sesión o token si las credenciales son correctas:
+
+-Sesión: Se almacena información temporal sobre el usuario en el servidor.
+
+-Token: Se genera un identificador único que el usuario usa para futuras solicitudes sin necesidad de volver a autenticarse.
+
+-Envía una respuesta al cliente:
+
+-Si el login es exitoso, el servidor responde con acceso autorizado y redirige al usuario.
+
+-Si el login falla, envía un mensaje de error.
+
+---------------------------------------------------------------------------------------------------------------------------
+FECHA: 
+9/05/2025
+
+Elementos del diagrama entidad relacion.?
+
+R// Entidades (rectángulos): Representan objetos o conceptos, como clientes o productos.
+
+Atributos (óvalos): Características de una entidad, como nombre o edad.
+
+Relaciones (rombos): Conexiones entre entidades, como cliente compra producto.
+
+Llaves primarias: Identificadores únicos de cada entidad.
+
+Cardinalidad: Indica cómo se relacionan las entidades.
+
+
+
+Conceptos:
+clave primaria 
+caalve foranea 
+clave compuesta 
+
+R// Clave primaria: Identificador único de una entidad. No puede repetirse ni ser nulo (ej. ID de usuario).
+
+Clave foránea: Referencia a una clave primaria de otra tabla para establecer relaciones (ej. ID de usuario en una tabla de pedidos).
+
+Clave compuesta: Clave primaria formada por dos o más atributos para identificar de manera única una entidad (ej. ID de pedido + ID de producto en una tabla de detalles de compra)
+
+
+
+Tipos de datos en sql.
+
+R// Numéricos:
+
+INT, BIGINT, SMALLINT:  Números enteros.
+
+DECIMAL, NUMERIC, FLOAT, REAL:  Números decimales.
+
+Texto:
+
+CHAR(n): Texto de longitud fija.
+
+VARCHAR(n):  Texto de longitud variable.
+
+TEXT: Texto largo.
+
+Fecha y hora:
+
+DATE:  Fecha (AAAA-MM-DD).
+
+TIME:  Hora (HH:MM:SS).
+
+DATETIME, TIMESTAMP:  Fecha y hora combinadas.
+
+Booleanos (depende del motor de base de datos):
+
+BOOLEAN o BIT:  Valores TRUE o FALSE.
+
+Binarios:
+
+BLOB:  Datos binarios como imágenes o archivos.
+
+
+
+
+Las 3 formas normales de bases datos: 
+
+
+R// Primera forma normal (1FN):
+
+Cada columna debe contener solo valores atómicos (no listas ni conjuntos de datos).
+
+Cada fila debe ser única y tener una clave primaria.
+
+
+Segunda forma normal (2FN):
+
+Debe cumplir con la 1FN.
+
+Cada atributo que no sea clave debe depender completamente de la clave primaria (no de una parte de ella).
+
+
+Tercera forma normal (3FN):
+
+Debe cumplir con la 2FN.
+
+No debe haber dependencias transitivas (un atributo no clave debe depender directamente de la clave primaria, no de otro atributo no clave).
+
+---------------------------------------------------------------------------------------------------------------------------
+
+FECHA: 
+14/05/2025 
+
+		TIPOS DE DATOS EN (mysql)
+
+1.) Tipos de datos en mysql, dando una explicacion  con sus propias palabras.}
+
+R// Numéricos: Se usan para almacenar números y los de punto flotante, ideales para cálculos matemáticos.
+
+Cadenas de texto: Permiten guardar palabras, frases o documentos. Ejemplos incluyen VARCHAR, CHAR, TEXT 
+
+Fecha y hora: Muy útiles para registrar eventos, vencimientos o historiales. Incluyen DATE, DATETIME, TIMESTAMP.
+
+Booleanos: Representan valores de verdadero o falso. En MySQL, normalmente se usa TINYINT(1), donde 1 es verdadero y 0 es falso.
+
+Binarios: Se emplean para almacenar datos en formato binario, como imágenes o archivos en BLOB.
+
+
+
+2.) Listar los tipos de datos que va a usar mi proyecto. 
+
+R// INT: Se usa para valores numéricos enteros, ideales para identificadores o intentos, como 5.
+
+DECIMAL: Perfecto para datos con decimales, como puntuaciones o respuestas precisas, por ejemplo, 4.5.
+
+VARCHAR: Almacena información textual variable, útil para nombres, correos electrónicos, preguntas cortas o incluso enlaces a imágenes y videos, como "Juan".
+
+TEXT: Especialmente útil para grandes bloques de texto, como comentarios o retroalimentación extensa.
+
+DATE: Registra fechas importantes, por ejemplo, 2025-05-14, útil para seguimiento y organización.
+
+DATETIME: Guarda tanto la fecha como la hora exacta de un evento, por ejemplo, 2025-05-14 15:43:00.
+
+BOOLEAN: Representa estados de sí/no o verdadero/falso, como la finalización de una tarea.
+
+CHAR: Se usa para texto de longitud fija, ideal para categorías o roles, como "estudiante".
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Fecha:21/05/2025			CONSULTAR
+
+CREATE TABLE aseo ( id_aseo INT AUTO_INCREMENT PRIMARY KEY, id_estudiante INT NOT NULL, id_salon INT NOT NULL, fecha DATE NOT NULL, rol VARCHAR(50) NOT NULL, FOREIGN KEY(id_estudiante)REFERENCES estudiante(id_estudiante), FOREIGN KEY (id_salon)REFERENCES salon(id_salon) );
+INSERT INTO salon(id_salon, numero, ubicacion) VALUES (1, '18-150', 'cuarto 18 primer piso'), (2, '12-102', 'cuarto 12 segundo piso'), (3, '13-103', 'cuarto 13 tercer piso'), (4, '14-104', 'cuarto 14 cuarto piso'), (5, '15-105', 'cuarto 15 quinto piso'), (6, '16-106', 'cuarto 16 sexto piso');
+INSERT INTO estudiante (id_estudiante, nombre, apellido, id_grupo)
+VALUES (1, 'leonel', 'Villa', 2);
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Fecha: 6/06/2025
+
+1.  Consultar que es el modelo de caja en CSS (BOXMODEL)
+2. ¿Qué sistemas de medida se usan en CSS?
+
+		Solucion  
+1. El modelo de caja en CSS (Box Model) es un concepto fundamental que describe cómo los elementos HTML se representan en la página web. Cada elemento se compone de diferentes partes:
+
+Contenido: Es la parte central del elemento, donde se muestran el texto o las imágenes.
+
+Relleno (Padding): Espacio entre el contenido y el borde.
+
+Borde (Border): La línea que rodea el contenido y el relleno.
+
+Margen (Margin): Espacio entre el elemento y los demás elementos alrededor.
+
+Este modelo permite controlar el tamaño y el espacio de los elementos en una página. En CSS, puedes modificar cada parte con propiedades como margin, padding, border y width.
+
+2. Unidades Absolutas
+Son valores fijos que no cambian dependiendo del contexto:
+
+px (píxeles): Unidad más común en pantallas.
+
+cm, mm, in (centímetros, milímetros, pulgadas): Usadas en impresión.
+
+pt, pc (puntos, picas): También útiles para impresión.
+
+Unidades Relativas
+Se adaptan según el tamaño del elemento padre o del viewport:
+
+% (porcentaje): Basado en el tamaño del contenedor padre.
+
+em: Relativo al tamaño de la fuente del elemento padre.
+
+rem: Basado en el tamaño de la fuente del html.
+
+vw, vh (viewport width/height): Relativos al tamaño de la ventana.
+
+vmin, vmax: Basados en el valor mínimo o máximo entre vw y vh.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+30/07/2025
+ 
+1.) ¿Que es un framework CSS en diseño web?
+R// Un framework CSS es como una caja de herramientas lista para usar que facilita y agiliza el diseño de sitios web. En lugar de empezar desde cero escribiendo todo el código de estilos tú mismo, puedes usar un framework que ya incluye reglas, componentes y estructuras predefinidas. 
+
+Estilos y componentes reutilizables: botones, formularios, menús, etc.
+
+Sistema de grid para organizar el diseño de manera responsive (que se adapta a diferentes dispositivos).
+
+Buenas prácticas integradas que te ayudan a escribir código más limpio y consistente.
+
+Compatibilidad entre navegadores, resolviendo problemas comunes de visualización.
+
+
+2.) ¿Que es Bootstrap en diseño web?
+R// Bootstrap es un framework de código abierto que te permite crear sitios web modernos, responsivos y visualmente atractivos sin tener que escribir todo el CSS y JavaScript desde cero.
+
+Sistema de rejilla (grid): Divide la página en 12 columnas para organizar contenido fácilmente.
+
+Componentes predefinidos: Botones, formularios, menús, tarjetas, modales, etc., listos para usar.
+
+Diseño responsivo: Se adapta automáticamente a móviles, tablets y pantallas grandes.
+
+Compatibilidad entre navegadores: Evita problemas visuales en diferentes navegadores.
+
+Clases utilitarias: Para aplicar estilos rápidos como colores, márgenes, alineaciones, etc.
+
+3.) Identificar 2 sitios hechos con Bootstrap, listarlos e inspeccionarlos la linea de codigos domde es claro que estos sitios usan Bootstrap
+
+R// - https://www.ielasnieves.edu.co/.
+text-start {
+    text-align: left !important;                            bootstrap.css:8035 
+}
+
+
+- https://www.incolmotos-yamaha.com.co/ 
+.col-12 {
+    -ms-flex: 0 0 100%;                                   bootstrap.min.css:6
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
