@@ -1,0 +1,40 @@
+ body {
+      font-family: 'Arial', sans-serif;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #007BFF !important;
+    }
+    .nav-link {
+      color: #007BFF !important;
+    }
+    .nav-link:hover {
+      color: #28A745 !important;
+    }
+    .footer {
+      background-color: #007BFF;
+      color: white;
+      padding: 40px 0;
+    }
+    .footer a {
+      color: #FFC107;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #28A745;
+    }
+    .btn-primary {
+      background-color: #28A745;
+      border-color: #28A745;
+    }
+    .btn-primary:hover {
+      background-color: #218838;
+      border-color: #218838;
+    }
+    .main-content {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
