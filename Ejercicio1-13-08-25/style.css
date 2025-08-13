@@ -1,0 +1,53 @@
+body {
+      font-family: 'Arial', sans-serif;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #007BFF !important;
+    }
+    .nav-link {
+      color: #007BFF !important;
+    }
+    .nav-link:hover {
+      color: #28A745 !important;
+    }
+    .carousel-item img {
+      height: 500px;
+      object-fit: cover;
+    }
+    .carousel-caption {
+      background: rgba(0, 123, 255, 0.7);
+      border-radius: 10px;
+      padding: 15px;
+    }
+    .team-member {
+      text-align: center;
+      padding: 20px;
+    }
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #28A745;
+    }
+    .footer {
+      background-color: #007BFF;
+      color: white;
+      padding: 40px 0;
+    }
+    .footer a {
+      color: #FFC107;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #28A745;
+    }
+    .btn-primary {
+      background-color: #28A745;
+      border-color: #28A745;
+    }
+    .btn-primary:hover {
+      background-color: #218838;
+      border-color: #218838;
+    }
