@@ -1,0 +1,95 @@
+1. manejo de variables JavaScript 
+2. Como funciona el IF en JavaScript 
+3. Como funciona el WHILE en JavaScript 
+4. Como funciona el FOR en JavaScript 
+5. Como seleccionar elementos en JavaScript
+6. como modificar elementos en JavaScript
+
+
+SOLUCION: 
+
+1. Manejo de variables:
+
+-Si se usan Var, sea y Const.
+
+-Var es más antiguo y con alcance global o de función.
+
+-Let es para variables que cambian, con alcance de bloque.
+
+-Const es para valores fijos que no cambian.
+
+
+
+2. IF:
+
+-Ejecuta código si la condición es verdadera.
+
+-Permite Else y Else IF para otros casos.
+
+
+
+3. WHILE:
+
+-Repite el código mientras la condición sea verdadera.
+
+-Evalúa condición antes de cada vuelta.
+
+
+4. FOR:
+
+-Repite código un número fijo de veces.
+
+-Tiene inicio, condición y cambio (incremento o decremento).
+
+
+
+5. Selección de elementos:
+
+-Usar document.getElementById('id'),
+
+-documento.getElementsByClassName('clase'),
+
+-documento.querySelector('selector').
+
+
+
+6. Modificación de elementos:
+
+-Cambiar contenido con element.innerHTML,
+
+-Cambiar estilo con element.style.propiedad,
+
+-Cambiar atributos con element.setAttribute().
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
