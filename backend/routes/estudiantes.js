@@ -1,58 +1,91 @@
- // Crear un estudiante
+const express = require('express');
+const router = express.Router();
+const db = require('../db');
+router.get('/', (req, res) => {
+    db.query('SELECT * FROM estudiante', (err, results) => {
+        if (err) return res.status(500).json({ error: err });
+        res.json(results);
+    });
+});
+
+router.get('/:documento_identidad', (req, res) => {
+    const doc = req.params.documento_identidad;
+    db.query('SELECT * FROM estudiante WHERE documento_identidad =?',
+        [doc], (err, results) => {
+            if (err) return res.status(500).json({ error: err });
+            if (results.length == 0)
+                return res.status(404).json({ mensaje: 'Estudiante no encontrado' });
+            res.json(results[0]);
+        });
+});
+
+router.delete('/:documento_identidad', (req, res) => {
+    const doc = req.params.documento_identidad;
+    db.query('DELETE FROM estudiante WHERE documento_identidad =?',
+        [doc], (err, results) => {
+            if (err) return res.status(500).json({ error: err });
+            if (results.length == 0)
+                return res.status(404).json({ mensaje: 'Estudiante no encontrado' });
+            res.json(results[0]);
+        });
+});
+
 router.post('/', (req, res) => {
-  const { documento_identidad, nombre, apellido, /* otros campos */ } = req.body;
+    const {nombre, segundo_nombre, apellido, fecha_nacimiento, documento_identidad, genero } = req.body;
+    const query =`INSERT INTO estudiante(nombre, segundo_nombre, apellido, fecha_nacimiento, documento_identidad, genero)
+                  VALUES (?, ?, ?, ?, ?, ?)`;
+    db.query(query, [nombre, segundo_nombre, apellido, fecha_nacimiento,
+                documento_identidad, genero], (err, results) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: 'Error al insertar el estudiante',
+                                        detalle: err});
+        }
+        res.status(201).json({
+            mensaje: 'Estudiante agregado exitosamente',
+            id_insertado: results.insertId
 
-  // Validar que vengan los datos mínimos necesarios
-  if (!documento_identidad || !nombre || !apellido) {
-    return res.status(400).json({ mensaje: 'Faltan datos obligatorios' });
-  }
-
-  // Insertar en la base de datos
-  const sql = 'INSERT INTO estudiante (documento_identidad, nombre, apellido) VALUES (?, ?, ?)';
-  db.query(sql, [documento_identidad, nombre, apellido], (err, result) => {
-    if (err) {
-      // Si es error de clave duplicada, por ejemplo
-      if (err.code === 'ER_DUP_ENTRY') {
-        return res.status(409).json({ mensaje: 'Estudiante ya existe' });
-      }
-      return res.status(500).json({ error: err });
-    }
-    res.status(201).json({ mensaje: 'Estudiante creado', id: result.insertId });
-  });
+        });
+     });
 });
 
-// Actualizar un estudiante por documento_identidad
 router.put('/:documento_identidad', (req, res) => {
-  const doc = req.params.documento_identidad;
-  const { nombre, apellido /* otros campos */ } = req.body;
+    const { id } = req.params;
+    const { nombre, segundo_nombre, apellido, fecha_nacimiento, documento_identidad, genero } = req.body;
 
-  // Validar al menos un campo para actualizar
-  if (!nombre && !apellido) {
-    return res.status(400).json({ mensaje: 'Debe enviar al menos un campo para actualizar' });
-  }
+    const query = `
+        UPDATE estudiante 
+        SET nombre = ?, 
+            segundo_nombre = ?, 
+            apellido = ?, 
+            fecha_nacimiento = ?, 
+            documento_identidad = ?, 
+            genero = ?
+        WHERE id = ?`;
 
-  // Construir la consulta dinámicamente según campos enviados
-  let fields = [];
-  let values = [];
+    db.query(query, [nombre, segundo_nombre, apellido, fecha_nacimiento, documento_identidad, genero, id],
+        (err, results) => {
+            if (err) {
+                console.error(err);
+                return res.status(500).json({
+                    error: 'Error al actualizar el estudiante',
+                    detalle: err
+                });
+            }
 
-  if (nombre) {
-    fields.push('nombre = ?');
-    values.push(nombre);
-  }
-  if (apellido) {
-    fields.push('apellido = ?');
-    values.push(apellido);
-  }
+            if (results.affectedRows === 0) {
+                return res.status(404).json({ mensaje: 'Estudiante no encontrado' });
+            }
 
-  values.push(doc); // para la condición WHERE
-
-  const sql = `UPDATE estudiante SET ${fields.join(', ')} WHERE documento_identidad = ?`;
-
-  db.query(sql, values, (err, result) => {
-    if (err) return res.status(500).json({ error: err });
-    if (result.affectedRows === 0) {
-      return res.status(404).json({ mensaje: 'Estudiante no encontrado' });
-    }
-    res.json({ mensaje: 'Estudiante actualizado correctamente' });
-  });
+            res.status(200).json({
+                mensaje: 'Estudiante actualizado exitosamente'
+            });
+        }
+    );
 });
+
+        
+                
+
+
+module.exports = router;
